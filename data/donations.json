@@ -6,8 +6,8 @@
             "lng": "-98.183519"
         },
     "website_url": "http://www.foodbankrgv.com/",
-    "picture": " ",
-    "desc": " ",
+    "image": " ",
+    "description": " ",
     "contactUs": "(956) 682-8101",
     "address": {
         "street": "724 N Cage Blvd,",
@@ -33,8 +33,8 @@
         },
     ],
     "website_url": "http://www.goodwillsouthtexas.com",
-    "picture": " ",
-    "desc": " ",
+    "image": " ",
+    "description": " ",
     "contactUs": "(866) 222-0555",
     "address": {
         "street": "1561 S. McColl Road",
@@ -55,8 +55,8 @@
             "lng": "-98.2303642"
         },
     "website_url": "https://www.bloodhero.com",
-    "picture": "http://www.unitedbloodservices.org/images/Rewards_HeroMe_splash.jpg",
-    "desc": " ",
+    "image": "http://www.unitedbloodservices.org/images/Rewards_HeroMe_splash.jpg",
+    "description": " ",
     "contactUs": "(877) 827-4376",
     "address": {
         "street": "1400 S 6th St",
