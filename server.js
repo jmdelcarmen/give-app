@@ -40,6 +40,8 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 //Homepage//
 app.get('/', index.displayHomePage);
+app.get('/volunteer', index.displayVolunteerPage);
+app.get('/donation', index.displayDonationPage);
 //Donation//
 app.get('/donation', donation.displayDonationPage);
 app.get('/donation/foodbank', donation.displayDonationFoodbank);
