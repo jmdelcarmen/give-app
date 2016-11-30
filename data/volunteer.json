@@ -8,7 +8,11 @@
     "website_url": "http://pvaconline.com/",
     "picture": " ",
     "desc": "Palm Valley Animal Center is the only full service, open admission, animal intake facility in all of Hidalgo County. Receiving nearly 32,000 animals a year we are one of the largest single intake facilities in the nation. We service the majority of Hidalgo County and more than 750,000 residents.",
-    "contactUs": "956-686-1141",
+    "contactUs": [{
+        "name": " ",
+        "title": " ",
+        "phoneNumber": "956-686-1141"
+        }],
     "address": {
         "street": "2501 W Trenton Rd",
         "city": "Edinburg",
@@ -22,7 +26,7 @@
         "hour": "10 am - 4:00 pm"
 
     }],
-    "open_closed": "",
+    "open_closed": " ",
 }, {
     "name": "Doctors Hospital At Renaissance",
     "category": "Volunteer",
@@ -45,10 +49,10 @@
         "zip": "78539"
     },
     "hours": " ",
-    "open_closed":
+    "open_closed":" "
 
 }, {
-    "name": " SOUTH TEXAS HEALTH SYSTEM ",
+    "name": "South Texas Health System",
     "category": "Volunteer",
     "location": {
             "lat": "26.262895",
@@ -69,10 +73,10 @@
         "zip": "78539"
     },
     "hours": " ",
-    "open_closed":
+    "open_closed":" "
 
 },  {
-    "name": " Food Bank of the RGV ",
+    "name": "Food Bank of the RGV",
     "category": "Volunteer",
     "location": {
             "lat": "26.2015888",
@@ -88,8 +92,8 @@
         "state": "Texas",
         "zip": "78577"
     },
-    "hours": "8:00 am - 5:00 pm ",
-    "open_closed": "",
+    "hours": "8:00 am - 5:00 pm",
+    "open_closed": " ",
 }
 
 ]
