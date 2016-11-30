@@ -1,5 +1,5 @@
 {
-  "name": "give-app",
+  "name": "give-it-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jmdelcarmen/give-app.git"
+    "url": "git+https://github.com/jmdelcarmen/give-it-app.git"
   },
   "author": "Marco, Jack, Casey, Gracie, Lauren, Elia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jmdelcarmen/give-app/issues"
+    "url": "https://github.com/jmdelcarmen/give-it-app/issues"
   },
-  "homepage": "https://github.com/jmdelcarmen/give-app#readme",
+  "homepage": "https://github.com/jmdelcarmen/give-it-app#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "ejs": "^2.5.3",
