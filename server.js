@@ -8,6 +8,8 @@ const app = express();
 
 //routes
 const index = require('./routes/index');
+const volunteer = require('./routes/volunteer');
+const donation = require('./routes/donation');
 
 
 
@@ -25,8 +27,23 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 
-//APIs
+////////////////APIs//////////////////
+
+//Homepage//
 app.get('/', index.displayHomePage);
+//Donation//
+app.get('/donation', donation.displayDonationPage);
+app.get('/donation/foodbank', donation.displayDonationFoodbank);
+app.get('/donation/monetary', donation.displayDonationMonetary);
+app.get('/donation/clothesandtoys', donation.displayDonationClothesAndToys);
+app.get('/donation/blood', donation.displayDonationBlood);
+app.get('/donation/plasma', donation.displayDonationPlasma);
+//Volunteer//
+app.get('/volunteer', volunteer.displayVolunteerPage);
+app.get('/volunteer/hospital', volunteer.displayVolunteerHospital;
+app.get('/volunteer/foodbank', volunteer.displayVolunteerFoodbank);
+app.get('/volunteer/animalshelter', volunteer.displayVolunteerAnimalShelter);
+
 
 
 app.listen(3000, () => {
