@@ -6,6 +6,7 @@ exports.displayDonationPage = (req, res) => {
 
 exports.displayDonationFoodbank = (req, res) => {
   //display page
+  res.render('donations/foodbank');
 }
 
 exports.displayDonationMonetary = (req, res) => {
