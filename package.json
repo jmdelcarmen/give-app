@@ -10,13 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/jmdelcarmen/give-it-app.git"
   },
-  "author": "Marco, Jack, Casey, Gracie, Lauren, Elia",
+  "author": "Marco, Jack, Casey, Gracie, Laura, Elia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jmdelcarmen/give-it-app/issues"
   },
   "homepage": "https://github.com/jmdelcarmen/give-it-app#readme",
   "dependencies": {
+    "angular": "^1.5.9",
     "body-parser": "^1.15.2",
     "ejs": "^2.5.3",
     "express": "^4.14.0",
