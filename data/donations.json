@@ -17,7 +17,9 @@
     },
     "hours": "8:00 am - 5:00 pm ",
     "open_closed":
-}, {
+},
+
+{
     "name": "Goodwill of South Texas",
     "category": "Donation",
     "location": [
@@ -43,7 +45,9 @@
     "hours": " ",
     "open_closed":
 
-}, {
+},
+
+{
     "name": "United Blood Services",
     "category": "Donation",
     "location": {
@@ -63,5 +67,4 @@
     "hours": "8:00 am - 3:00 pm",
     "open_closed":
 
-}
-]
+}]

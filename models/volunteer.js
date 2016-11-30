@@ -40,7 +40,7 @@ let volSchm = mongoose.Schema({
     }],
 
     open_closed: Boolean,
-    
+
 });
 
-module.exports = mongoose.model( 'Volunteer' , volSchm ;
+module.exports = mongoose.model( 'Volunteer' , volSchm );
