@@ -29,7 +29,7 @@ let volSchm = mongoose.Schema({
         street : String,
         city : String,
         state : String,
-        zip : String
+        zip : Number
     },
 
     hours : [{

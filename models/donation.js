@@ -29,7 +29,7 @@ let donSchm = mongoose.Schema({
         street : String,
         city : String,
         state : String,
-        zip : String
+        zip : Number
     },
 
     hours : [{
@@ -40,7 +40,7 @@ let donSchm = mongoose.Schema({
     }],
 
     open_closed: Boolean
-    
+
 });
 
 module.exports = mongoose.model( 'Donation' , donSchm );
