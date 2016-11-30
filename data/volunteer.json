@@ -1,0 +1,95 @@
+[{
+    "name": "Palm Valley Animal Center",
+    "category": "Volunteer",
+    "location": {
+        "lat": "26.266545",
+        "lng": "-98.19701"
+    },
+    "website_url": "http://pvaconline.com/",
+    "picture": " ",
+    "desc": "Palm Valley Animal Center is the only full service, open admission, animal intake facility in all of Hidalgo County. Receiving nearly 32,000 animals a year we are one of the largest single intake facilities in the nation. We service the majority of Hidalgo County and more than 750,000 residents.",
+    "contactUs": "956-686-1141",
+    "address": {
+        "street": "2501 W Trenton Rd",
+        "city": "Edinburg",
+        "state": "Texas",
+        "zip": "78539"
+    },
+    "hours": [{
+        "days": "Monday-Saturday",
+        "hours": "8:00 am - 5:00 pm ",
+        "day": "Sunday",
+        "hour": "10 am - 4:00 pm"
+
+    }],
+    "open_closed": "",
+}, {
+    "name": "Doctors Hospital At Renaissance",
+    "category": "Volunteer",
+    "location": {
+            "lat": "26.2523472",
+            "lng": "-98.2070567"
+        },
+    "website_url": "https://www.dhr-rgv.com/Career-Center/Volunteer-Services.aspx",
+    "picture": "https://www.dhr-rgv.com/images/Volunteer-logo_small.aspx ",
+    "desc": " Want to help out your local community? Want to gain medical knowledge & experience? Volunter at Doctors Hospital at Renaissance. DHR offers volunteer programs for adults, college and high school students.",
+    "contactUs": [{
+        "name": "Cristie Esparza",
+        "title": "Volunteer Manager",
+        "phoneNumber": "956-362-3203"
+        }],
+    "address": {
+        "street": "5501 S. McColl Rd",
+        "city": "Edinburg",
+        "state": "Texas",
+        "zip": "78539"
+    },
+    "hours": " ",
+    "open_closed":
+
+}, {
+    "name": " SOUTH TEXAS HEALTH SYSTEM ",
+    "category": "Volunteer",
+    "location": {
+            "lat": "26.262895",
+            "lng": "-98.1820322"
+        },
+    "website_url": "http://www.southtexashealthsystem.com/community-programs/volunteers#.WD8Q76IrJE4",
+    "picture": " ",
+    "desc": " ",
+    "contactUs": [{
+        "name": "Volunteer Services",
+        "title": "The South Texas Health System Volunteer Department",
+        "phoneNumber": "956-388-2020"
+        }],
+    "address": {
+        "street": "1400 W. Trenton Rd.",
+        "city": "Edinburg",
+        "state": "Texas",
+        "zip": "78539"
+    },
+    "hours": " ",
+    "open_closed":
+
+},  {
+    "name": " Food Bank of the RGV ",
+    "category": "Volunteer",
+    "location": {
+            "lat": "26.2015888",
+            "lng": "-98.183519"
+        },
+    "website_url": "http://www.foodbankrgv.com/howtohelp-2/volunteer",
+    "picture": " ",
+    "desc": " ",
+    "contactUs": "(956) 682-8101",
+    "address": {
+        "street": "724 N Cage Blvd,",
+        "city": "Pharr",
+        "state": "Texas",
+        "zip": "78577"
+    },
+    "hours": "8:00 am - 5:00 pm ",
+    "open_closed": "",
+}
+
+]

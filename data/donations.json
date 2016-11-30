@@ -2,12 +2,66 @@
     "name": "Foodbank of the RGV",
     "category": "Donation",
     "location": {
-        "lat": "",
-        "lng": ""
-    },
-    "website_url": "",
+            "lat": "26.2015888",
+            "lng": "-98.183519"
+        },
+    "website_url": "http://www.foodbankrgv.com/",
     "picture": " ",
     "desc": " ",
+    "contactUs": "(956) 682-8101",
+    "address": {
+        "street": "724 N Cage Blvd,",
+        "city": "Pharr",
+        "state": "Texas",
+        "zip": "78577"
+    },
+    "hours": "8:00 am - 5:00 pm ",
+    "open_closed":
+}, {
+    "name": "Goodwill of South Texas",
+    "category": "Donation",
+    "location": [
+        {
+            "lat": "",
+            "lng": ""
+        },
+        {
+            "lat": "",
+            "lng": ""
+        },
+    ],
+    "website_url": "http://www.goodwillsouthtexas.com",
+    "picture": " ",
+    "desc": " ",
+    "contactUs": "(866) 222-0555",
+    "address": {
+        "street": "1561 S. McColl Road",
+        "city": "Edinburg",
+        "state": "Texas",
+        "zip": "78539"
+    },
     "hours": " ",
     "open_closed":
-    }]
+
+}, {
+    "name": "United Blood Services",
+    "category": "Donation",
+    "location": {
+            "lat": "26.1905609",
+            "lng": "-98.2303642"
+        },
+    "website_url": "https://www.bloodhero.com",
+    "picture": "http://www.unitedbloodservices.org/images/Rewards_HeroMe_splash.jpg",
+    "desc": " ",
+    "contactUs": "(877) 827-4376",
+    "address": {
+        "street": "1400 S 6th St",
+        "city": "McAllen",
+        "state": "Texas",
+        "zip": "78501"
+    },
+    "hours": "8:00 am - 3:00 pm",
+    "open_closed":
+
+}
+]
