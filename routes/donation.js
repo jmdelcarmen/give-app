@@ -5,22 +5,21 @@ exports.displayDonationPage = (req, res) => {
 }
 
 exports.displayDonationFoodbank = (req, res) => {
-  //display page
   res.render('donations/foodbank');
 }
 
 exports.displayDonationMonetary = (req, res) => {
-  //display page
+  res.render('donations/monetary');
 }
 
 exports.displayDonationClothesAndToys = (req, res) => {
-  //display page
+  res.render('donations/clothesandtoys');
 }
 
 exports.displayDonationBlood = (req, res) => {
-  //display page
+  res.render('donations/blood');
 }
 
 exports.displayDonationPlasma = (req, res) => {
-  //display page
+  res.render('donations/plasma');
 }

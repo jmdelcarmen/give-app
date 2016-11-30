@@ -5,13 +5,13 @@ exports.displayVolunteerPage = (req, res) => {
 }
 
 exports.displayVolunteerHospital = (req, res) => {
-  //display something
+  res.render('volunteer/hospital');
 }
 
 exports.displayVolunteerFoodbank = (req, res) => {
-  //display something
+  res.render('volunteer/foodbank');
 }
 
 exports.displayVolunteerAnimalShelter = (req, res) => {
-  //display something
+  res.render('volunteer/animalshelter');
 }
