@@ -39,7 +39,7 @@ let donSchm = mongoose.Schema({
         hour : String
     }],
 
-    open_closed: Boolean,
+    open_closed: Boolean
     
 });
 
