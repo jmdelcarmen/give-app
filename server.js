@@ -40,7 +40,7 @@ app.get('/donation/blood', donation.displayDonationBlood);
 app.get('/donation/plasma', donation.displayDonationPlasma);
 //Volunteer//
 app.get('/volunteer', volunteer.displayVolunteerPage);
-app.get('/volunteer/hospital', volunteer.displayVolunteerHospital;
+app.get('/volunteer/hospital', volunteer.displayVolunteerHospital);
 app.get('/volunteer/foodbank', volunteer.displayVolunteerFoodbank);
 app.get('/volunteer/animalshelter', volunteer.displayVolunteerAnimalShelter);
 
