@@ -2,7 +2,7 @@
   "name": "give-it-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
@@ -19,6 +19,7 @@
   "dependencies": {
     "angular": "^1.5.9",
     "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
     "ejs": "^2.5.3",
     "ejs-locals": "^1.0.2",
     "express": "^4.14.0",

@@ -6,10 +6,19 @@ const path = require('path');
 const engine = require('ejs-locals');
 const app = express();
 
+//Database Setup
+require('dotenv').config();
+const mongoose = require('mongoose');
+const db = process.env.MONGO_URI || 'mongodb://localhost/givitapp';
+mongoose.connect(db);
+
+
 //routes
 const index = require('./routes/index');
 const volunteer = require('./routes/volunteer');
 const donation = require('./routes/donation');
+
+
 
 
 
