@@ -21,10 +21,10 @@
     },
     "hours": [{
         "days": "Monday-Saturday",
-        "hours": "8:00 am - 5:00 pm ",
-        "day": "Sunday",
-        "hour": "10 am - 4:00 pm"
-
+        "hours": "8:00 am - 5:00 pm "
+      }, {
+        "days": "Sunday",
+        "hours": "10 am - 4:00 pm"
     }],
     "open_closed": " "
 },
