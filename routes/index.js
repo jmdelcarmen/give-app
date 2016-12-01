@@ -4,10 +4,10 @@ exports.displayHomePage = (req, res) => {
   res.render('index');
 }
 
-exports.displayDonationPage = (req, res) => {
-  res.render('volunteer');
+exports.displayAboutPage = (req, res) => {
+  res.render('about');
 }
 
-exports.displayVolunteerPage = (req, res) => {
-  res.render('donation');
+exports.displayContactPage = (req, res) => {
+  res.render('contact');
 }

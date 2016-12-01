@@ -1,7 +1,7 @@
 'use strict';
 
 exports.displayVolunteerPage = (req, res) => {
-  //display something
+  res.render('volunteer');
 }
 
 exports.displayVolunteerHospital = (req, res) => {

@@ -1,7 +1,7 @@
 'use strict';
 
 exports.displayDonationPage = (req, res) => {
-  //display page
+  res.render('donation');
 }
 
 exports.displayDonationFoodbank = (req, res) => {
