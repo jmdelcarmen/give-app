@@ -2,8 +2,8 @@
     "name": "Foodbank of the RGV",
     "category": "Donation",
     "location": {
-            "lat": "26.2015888",
-            "lng": "-98.183519"
+            "lat": 26.2015888,
+            "lng": -98.183519
         },
     "website_url": "http://www.foodbankrgv.com/",
     "image": " ",
@@ -13,7 +13,7 @@
         "street": "724 N Cage Blvd,",
         "city": "Pharr",
         "state": "Texas",
-        "zip": "78577"
+        "zip": 78577
     },
     "hours": "8:00 am - 5:00 pm ",
     "open_closed":
@@ -24,26 +24,34 @@
     "category": "Donation",
     "location": [
         {
-            "lat": "",
-            "lng": ""
+            "lat": 26.266834,
+            "lng": -98.1602561
         },
         {
-            "lat": "",
-            "lng": ""
+            "lat": 26.2558019,
+            "lng": -98.3175033
         },
+        {
+            "lat": 26.2409239,
+            "lng": -98.2477064
+        },
+        {
+            "lat": 26.19129,
+            "lng": -98.1298654
+        }
     ],
     "website_url": "http://www.goodwillsouthtexas.com",
     "image": " ",
-    "description": "Your dontations to Goodwill will help fund job training programs for people with disabilities or barriers.",
+    "description": "Your donations to Goodwill will help fund job training programs for people with disabilities or barriers.",
     "contactUs": "(866) 222-0555",
     "address": {
-        "street": "1561 S. McColl Road",
-        "city": "Edinburg",
-        "state": "Texas",
-        "zip": "78539"
+        "street": " ",
+        "city": " ",
+        "state": " ",
+        "zip": 78539
     },
     "hours": " ",
-    "open_closed":
+    "open_closed": " "
 
 },
 
@@ -51,20 +59,20 @@
     "name": "United Blood Services",
     "category": "Donation",
     "location": {
-            "lat": "26.1905609",
-            "lng": "-98.2303642"
+            "lat": 26.1905609,
+            "lng": 98.2303642
         },
     "website_url": "https://www.bloodhero.com",
-    "image": "http://www.unitedbloodservices.org/images/Rewards_HeroMe_splash.jpg",
+    "image": " ",
     "description": "United Blood Services is a nonprofit community blood center, providing blood and blood products for local area hospitals throughout the United States",
     "contactUs": "(877) 827-4376",
     "address": {
         "street": "1400 S 6th St",
         "city": "McAllen",
         "state": "Texas",
-        "zip": "78501"
+        "zip": 78501
     },
     "hours": "8:00 am - 3:00 pm",
-    "open_closed":
+    "open_closed": " "
 
 }]
