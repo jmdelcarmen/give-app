@@ -36,7 +36,6 @@ app.get('/contact', index.displayContactPage);
 //Donation//
 app.get('/donation', donation.displayDonationPage);
 app.get('/donation/foodbank', donation.displayDonationFoodbank);
-app.get('/donation/monetary', donation.displayDonationMonetary);
 app.get('/donation/clothesandtoys', donation.displayDonationClothesAndToys);
 app.get('/donation/blood', donation.displayDonationBlood);
 app.get('/donation/plasma', donation.displayDonationPlasma);
