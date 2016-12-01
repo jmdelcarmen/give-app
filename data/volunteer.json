@@ -2,8 +2,8 @@
     "name": "Palm Valley Animal Center",
     "category": "Volunteer",
     "location": {
-        "lat": "26.266545",
-        "lng": "-98.19701"
+        "lat": 26.266545,
+        "lng": -98.19701
     },
     "website_url": "http://pvaconline.com/",
     "image": " ",
@@ -17,7 +17,7 @@
         "street": "2501 W Trenton Rd",
         "city": "Edinburg",
         "state": "Texas",
-        "zip": "78539"
+        "zip": 78539
     },
     "hours": [{
         "days": "Monday-Saturday",
@@ -33,12 +33,12 @@
     "name": "Doctors Hospital At Renaissance",
     "category": "Volunteer",
     "location": {
-            "lat": "26.2523472",
-            "lng": "-98.2070567"
+            "lat": 26.2523472,
+            "lng": -98.2070567
         },
     "website_url": "https://www.dhr-rgv.com/Career-Center/Volunteer-Services.aspx",
     "image": "https://www.dhr-rgv.com/images/Volunteer-logo_small.aspx ",
-    "description": " Want to help out your local community? Want to gain medical knowledge & experience? Volunter at Doctors Hospital at Renaissance. DHR offers volunteer programs for adults, college and high school students.",
+    "description": "At Doctors Hospital at Renaissance we have programs specifically designed for adults, college and high school students in which you will have an opportunity to help others and gain knowledge in the medical field.",
     "contactUs": [{
         "name": "Cristie Esparza",
         "title": "Volunteer Manager",
@@ -48,7 +48,7 @@
         "street": "5501 S. McColl Rd",
         "city": "Edinburg",
         "state": "Texas",
-        "zip": "78539"
+        "zip": 78539
     },
     "hours": " ",
     "open_closed":" "
@@ -56,15 +56,15 @@
 },
 
 {
-    "name": "South Texas Health System",
+    "name": "McAllen Medical Center",
     "category": "Volunteer",
     "location": {
-            "lat": "26.262895",
-            "lng": "-98.1820322"
+            "lat": 26.262895,
+            "lng": -98.1820322
         },
     "website_url": "http://www.southtexashealthsystem.com/community-programs/volunteers#.WD8Q76IrJE4",
     "image": " ",
-    "description": " ",
+    "description": "If you have four hours a week to make a difference in someone’s life, please join the South Texas Health System Volunteer Organizations.",
     "contactUs": [{
         "name": "Volunteer Services",
         "title": "The South Texas Health System Volunteer Department",
@@ -74,9 +74,62 @@
         "street": "1400 W. Trenton Rd.",
         "city": "Edinburg",
         "state": "Texas",
-        "zip": "78539"
+        "zip": 78539
     },
     "hours": " ",
+    "open_closed":" "
+
+},
+
+{
+    "name": "Rio Grande Regional Hospital",
+    "category": "Volunteer",
+    "location": {
+            "lat": 26.186284,
+            "lng": -98.2229247
+        },
+    "website_url": "http://riohealth.com/patients-and-visitors/volunteers.dot",
+    "image": " ",
+    "description": "Nearly 200 adults from 19-95 years of age give generously of their time and talent to provide service to Rio Grande Regional Hospital. From answering telephones to assisting at the information desks and from working in the gift shop, selling popcorn, to offering assistance in patient care areas, our Volunteers are everywhere!",
+    "contactUs": [{
+        "title": "The South Texas Health System Volunteer Department",
+        "phoneNumber": "(956) 632-6154 "
+        }],
+    "address": {
+        "street": "101 East Ridge Road",
+        "city": "McAllen",
+        "state": "Texas",
+        "zip": 78503
+    },
+    "hours": " ",
+    "open_closed":" "
+
+},
+
+{
+    "name": "Mission Regional Medical Center",
+    "category": "Volunteer",
+    "location": {
+            "lat": 26.186284,
+            "lng": -98.2229247
+        },
+    "website_url": "http://missionrmc.org/patients-visitors/volunteers/",
+    "image": " ",
+    "description": "The Mission Regional Medical Center Auxiliary Volunteers are members of the Texas Association of Healthcare Volunteers and are a part of a growing number of individuals who seek areas to help our local community families. If interested in Volunteering at Mission Regional Medical Center, please pick up an application at our Gift Shop.",
+    "contactUs": [{
+        "title": "Gift Shop at Mission Regional Medical Center",
+        "phoneNumber": "(956) 323-1101"
+        }],
+    "address": {
+        "street": "900 S Bryan Rd",
+        "city": "Mission",
+        "state": "Texas",
+        "zip": 78572
+    },
+    "hours": [{
+        "days": "Monday-Friday ",
+        "hours": "8:00 am - 7:30 pm"
+    }],
     "open_closed":" "
 
 },
@@ -85,8 +138,8 @@
     "name": "Food Bank of the RGV",
     "category": "Volunteer",
     "location": {
-            "lat": "26.2015888",
-            "lng": "-98.183519"
+            "lat": 26.2015888,
+            "lng": -98.183519
         },
     "website_url": "http://www.foodbankrgv.com/howtohelp-2/volunteer",
     "image": " ",
@@ -96,7 +149,7 @@
         "street": "724 N Cage Blvd,",
         "city": "Pharr",
         "state": "Texas",
-        "zip": "78577"
+        "zip": 78577
     },
     "hours": "8:00 am - 5:00 pm",
     "open_closed": " "
