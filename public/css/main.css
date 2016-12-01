@@ -1,5 +1,27 @@
 /*Color change*/
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: tomato;
-  color: white;
+  background: #f1f1f1;
+  color: #444;
+}
+
+a, a:active, a:hover {
+  text-decoration: none;
+  border: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.row {
+  margin-top: 1em;
+}
+
+.row div {
+  border: 1px solid black;
+  min-height: 300px;
 }
