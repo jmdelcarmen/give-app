@@ -29,7 +29,7 @@ body {
 }
 
 .back {
-  background: url("http://freeimagescollection.com/images/flowers-closeup/green-trees-as-blurred-background-of-a-garden-park-forest-f5.jpg");
+  background: url("http://cdn.wallpapersafari.com/0/85/s12gdb.jpg");
   padding-top:50px;
   padding-bottom:20px;
 }
@@ -74,6 +74,7 @@ ul, li {
   min-height: 300px;
 }
 
+
 #volunteer {
   margin-top: 50px;
 
@@ -84,4 +85,9 @@ ul, li {
  width: 700px;
  position: relative;
  left: 25%;
+}
+/********************************/
+.img-center{
+ display: inline-block;
+ margin: 0 auto;
 }
