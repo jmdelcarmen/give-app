@@ -35,15 +35,11 @@ app.get('/about', index.displayAboutPage);
 app.get('/contact', index.displayContactPage);
 //Donation//
 app.get('/donation', donation.displayDonationPage);
-app.get('/donation/foodbank', donation.displayDonationFoodbank);
-app.get('/donation/clothesandtoys', donation.displayDonationClothesAndToys);
-app.get('/donation/blood', donation.displayDonationBlood);
-app.get('/donation/plasma', donation.displayDonationPlasma);
+app.get('/donation/:category', donation.displayDonationCategory);
 //Volunteer//
 app.get('/volunteer', volunteer.displayVolunteerPage);
-app.get('/volunteer/hospital', volunteer.displayVolunteerHospital);
-app.get('/volunteer/foodbank', volunteer.displayVolunteerFoodbank);
-app.get('/volunteer/animalshelter', volunteer.displayVolunteerAnimalShelter);
+app.get('/volunteer/:category', volunteer.displayVolunteerCategory);
+
 
 
 app.listen(3000, () => {
