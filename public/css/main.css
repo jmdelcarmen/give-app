@@ -8,9 +8,57 @@ body {
   color: #444;
 }
 
+.col-lg-6{
+  background: linear-gradient(90deg,
+     rgba(255, 255, 255, 0) 0%,
+     rgba(255, 255, 255, 0.2) 25%,
+     rgba(255, 255, 255, 0.2) 75%,
+     rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+     inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.col-lg-4{
+  background: linear-gradient(90deg,
+     rgba(255, 255, 255, 0) 0%,
+     rgba(255, 255, 255, 0.2) 25%,
+     rgba(255, 255, 255, 0.2) 75%,
+     rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+     inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.back {
+  background: url("http://freeimagescollection.com/images/flowers-closeup/green-trees-as-blurred-background-of-a-garden-park-forest-f5.jpg");
+  padding-top:50px;
+  padding-bottom:20px;
+}
+
+.donate-photo {
+  height:45%;
+  width:45%;
+}
+
+.volunteer-photo {
+  height:67.7%;
+  width:67.7%;
+}
+
+.stuck {
+  position: fixed;
+  width: 100%;
+}
+
 a, a:active, a:hover {
   text-decoration: none;
   border: none;
+  cursor:pointer;
+}
+
+.bold {
+  font-size:x-large;
+  align: center;
+  font-weight: bold;
 }
 
 ul, li {
@@ -18,7 +66,7 @@ ul, li {
 }
 
 .row {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .row div {
@@ -29,4 +77,11 @@ ul, li {
 #volunteer {
   margin-top: 50px;
 
+}
+
+#map {
+ height: 400px;
+ width: 700px;
+ position: relative;
+ left: 25%;
 }
