@@ -13,11 +13,12 @@ exports.displayDonationPage = (req, res) => {
 }
 
 exports.displayDonationFoodbank = (req, res) => {
-  Donation.find({name: {$regex: /foodbank/, $options: 'ig'}}, (err, donations) => {
+  // var val = new RegExp('foodbank');
+  Donation.find({name: {$regex: /*val*//foodbank/, $options: 'ig'}}, (err, donations) => {
     if (err) {
       res.status(500).send('Failed to load donations.');
     } else {
-      res.render('donations/foodbank', {donations: donations});
+      res.render('donations/foodbank', {donations: donations, key: process.env.MAP_KEY});
     }
   });
 }
