@@ -28,19 +28,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 ////////////////APIs//////////////////
-
 //Homepage//
 app.get('/', index.displayHomePage);
 app.get('/about', index.displayAboutPage);
-app.get('/contact', index.displayContactPage);
 //Donation//
 app.get('/donation', donation.displayDonationPage);
 app.get('/donation/:category', donation.displayDonationCategory);
 //Volunteer//
 app.get('/volunteer', volunteer.displayVolunteerPage);
 app.get('/volunteer/:category', volunteer.displayVolunteerCategory);
-
-
 
 app.listen(3000, () => {
   console.log('Construction ongoing on port 3000.');
