@@ -7,7 +7,3 @@ exports.displayHomePage = (req, res) => {
 exports.displayAboutPage = (req, res) => {
   res.render('about');
 }
-
-exports.displayContactPage = (req, res) => {
-  res.render('contact');
-}
