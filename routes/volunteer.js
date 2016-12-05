@@ -12,11 +12,15 @@ exports.displayVolunteerPage = (req, res) => {
   });
 }
 
+// exports.displayVolunteerCategory = (req, res) => {
+//   let category = new RegExp(req.params.category.replace('_', ' '));
+//   Volunteer.find({name: {$regex: category, $options: 'wsig'}}, (err, volunteers) => {
 exports.displayVolunteerHospital = (req, res) => {
-  Volunteer.find({name: {$regex: /hospital/, $options: 'sig'}}, (err, volunteers) => {
+   Volunteer.find({name: {$regex: /hospital/, $options: 'sig'}}, (err, volunteers) => {
     if (err) {
       res.status(500).send('Failed to load volunteers.');
     } else {
+      // res.render('volunteer/volunteer-category', {volunteers: volunteers, key: process.env.MAP_KEY});
       res.render('volunteer/hospital', {volunteers: volunteers});
     }
   });
@@ -38,6 +42,6 @@ exports.displayVolunteerAnimalShelter = (req, res) => {
       res.status(500).send('Failed to load volunteers.');
     } else {
       res.render('volunteer/animalshelter', {volunteers: volunteers});
-    }
-  });
-}
+      }
+    });
+  }

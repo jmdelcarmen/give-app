@@ -11,7 +11,7 @@
     "contactUs": "(956) 682-8101",
     "address": {
         "street": "724 N Cage Blvd,",
-        "city": "Pharr",
+        "city": "Pharr,",
         "state": "Texas",
         "zip": 78577
     },
@@ -75,4 +75,24 @@
     "hours": "8:00 am - 3:00 pm",
     "open_closed": " "
 
+},
+{
+    "name" : "GRIFOLS Plasma: Biomat USA, INC.",
+    "category" : "Donation",
+    "location" : {
+        "lat" : 26.207325,
+        "lng" : -98.2310227
+    },
+    "website_url" : "https://www.grifolsplasma.com/en/web/plasma/-/bicentennial-mcallen-tx",
+    "image" : " ",
+    "description" : "Grifols is a global healthcare company with more than 13,000 employees in 25 countries working together to improve people's health and well-being. We produce and market life-saving, plasma-derived medicines, diagnostic systems and hospital pharmacy products that are used to treat patients in more than 100 countries worldwide.",
+    "contactUs" : "(956) 686-0042",
+    "address" : {
+        "street" : "400 N 10th Street ",
+        "city" : "McAllen",
+        "state" : "Texas ",
+        "zip" : 78501.0
+    },
+    "hours" : " ",
+    "open_closed" : " "
 }]

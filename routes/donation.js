@@ -12,12 +12,17 @@ exports.displayDonationPage = (req, res) => {
   });
 }
 
+// exports.displayDonationCategory = (req, res) => {
+//   let category = new RegExp(req.params.category.replace('_', ' '));
+//   Donation.find({name: {$regex: category, $options: 'wsig'}}, (err, donations) => {
 exports.displayDonationFoodbank = (req, res) => {
-  Donation.find({name: {$regex: /foodbank/, $options: 'ig'}}, (err, donations) => {
+  // var val = new RegExp('foodbank');
+  Donation.find({name: {$regex: /*val*//foodbank/, $options: 'ig'}}, (err, donations) => {
     if (err) {
       res.status(500).send('Failed to load donations.');
     } else {
-      res.render('donations/foodbank', {donations: donations});
+      // res.render('donation/donation-category', {donations: donations, key: process.env.MAP_KEY});
+      res.render('donation/foodbank', {donations: donations, key: process.env.MAP_KEY});
     }
   });
 }
@@ -27,27 +32,17 @@ exports.displayDonationClothesAndToys = (req, res) => {
     if (err) {
       res.status(500).send('Failed to load donations.');
     } else {
-      res.render('donations/clothesandtoys', {donations: donations});
+      res.render('donation/clothesandtoys', {donations: donations});
     }
   });
 }
 
 exports.displayDonationBlood = (req, res) => {
-  Donation.find({name: {$regex: /blood/, $options: 'ig'}}, (err, donations) => {
-    if (err) {
-      res.status(500).send('Failed to load donations.');
-    } else {
-      res.render('donations/blood', {donations: donations});
-    }
-  });
-}
-
-exports.displayDonationPlasma = (req, res) => {
-  Donation.find({name: {$regex: /blood services/, $options: 'sig'}}, (err, donations) => {
-    if (err) {
-      res.status(500).send('Failed to load donations.');
-    } else {
-      res.render('donations/plasma', {donations: donations});
+   Donation.find({name: {$regex: /blood/, $options: 'ig'}}, (err, donations) => {
+     if (err) {
+       res.status(500).send('Failed to load donations.');
+     } else {
+       res.render('donation/blood', {donations: donations});
     }
   });
 }

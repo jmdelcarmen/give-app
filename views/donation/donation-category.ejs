@@ -1,0 +1,66 @@
+<!--
+
+<% layout('../layout') -%>
+
+
+
+<p class="lead"> IMAGE AND INFO GOES HERE</p>
+<p class="text-center"><a class="bold" href= <%= donations[0].website_url%> ><%= donations[0].name%></a></p>
+<p class="text-center"><%= donations[0].description%></p>
+<p class="text-center">
+  <b>Address: </b><%=donations[0].address.street%>
+                  <%=donations[0].address.city%>
+                  <%=donations[0].address.state%>
+                  <%=donations[0].address.zip%>
+</p>
+<p class="text-center">
+  <b>Phone: </b><%=donations[0].contactUs%>
+</p>
+<p class="text-center">
+  <b>Hours: </b><%=donations[0].hours%>
+</p>
+
+
+
+<h3><%= donations[0].name%></h3>
+<div id="map">
+
+  <script>
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 26.268383, lng: -98.219369}
+        });
+
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [{lat: 26.2015888,lng: -98.183519}]
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= key%>&callback=initMap"></script>
+</div>
+
+<%= donations%>
+
+-->
