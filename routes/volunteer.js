@@ -3,45 +3,31 @@
 const Volunteer = require('../models/volunteer');
 
 exports.displayVolunteerPage = (req, res) => {
-  Volunteer.find({}, (err, volunteers) => {
+  //hospitals
+   Volunteer.find({name: {$regex: /hospital/, $options: 'sig'}}, (err, hospitals) => {
     if (err) {
       res.status(500).send('Failed to load volunteers.');
     } else {
-      res.render('volunteer', {volunteers: volunteers});
+      //foodbank
+      Volunteer.find({name: {$regex: /food/, $options: 'sig'}}, (err, foodbanks) => {
+       if (err) {
+         res.status(500).send('Failed to load volunteers.');
+       } else {
+         Volunteer.find({name: {$regex: /animal/, $options: 'sig'}}, (err, animalshelters) => {
+          if (err) {
+            res.status(500).send('Failed to load volunteers.');
+          } else {
+            res.render('volunteer', {hospitals: hospitals, foodbanks: foodbanks, animalshelters: animalshelters});
+          }
+        });
+       }
+     });
     }
   });
 }
 
-// exports.displayVolunteerCategory = (req, res) => {
-//   let category = new RegExp(req.params.category.replace('_', ' '));
-//   Volunteer.find({name: {$regex: category, $options: 'wsig'}}, (err, volunteers) => {
-exports.displayVolunteerHospital = (req, res) => {
-   Volunteer.find({name: {$regex: /hospital/, $options: 'sig'}}, (err, volunteers) => {
-    if (err) {
-      res.status(500).send('Failed to load volunteers.');
-    } else {
-      // res.render('volunteer/volunteer-category', {volunteers: volunteers, key: process.env.MAP_KEY});
-      res.render('volunteer/hospital', {volunteers: volunteers});
-    }
+exports.displayVolunteerItem = (req, res) => {
+  Volunteer.findById(req.params.id, (err, volunteer) => {
+    console.log(volunteer);
   });
 }
-
-exports.displayVolunteerFoodbank = (req, res) => {
-  Volunteer.find({name: {$regex: /food/, $options: 'sig'}}, (err, volunteers) => {
-    if (err) {
-      res.status(500).send('Failed to load volunteers.');
-    } else {
-      res.render('volunteer/foodbank', {volunteers: volunteers});
-    }
-  });
-}
-
-exports.displayVolunteerAnimalShelter = (req, res) => {
-  Volunteer.find({name: {$regex: /animal/, $options: 'sig'}}, (err, volunteers) => {
-    if (err) {
-      res.status(500).send('Failed to load volunteers.');
-    } else {
-      res.render('volunteer/animalshelter', {volunteers: volunteers});
-      }
-    });
-  }

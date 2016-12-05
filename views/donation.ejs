@@ -1,51 +1,36 @@
 <% layout('layout') -%>
 
 <div class="container">
-  <h1 class="text-center">Donations</h1>
+  <h1 class="text-center">Donation</h1>
   <!-- FIRST ROW -->
   <div class="row">
-    <div class="col-lg-6">
-      <h3 class="text-center"><a href='/donation/foodbank'>FoodBank</a></h3>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center">Foodbank of the RGV</p>
-      <p class="text-center">724 N Cage Blvd Pharr, Texas 78577</p>
-      <p class="text-center">(956) 682-8101</p>
-      <p class="text-center">8:00 am - 5:00 pm</p>
-      <button type="button" class="btn btn-info">Visit Site</button>
+    <div class="col-lg-4">
+      <h3 class="text-center">Goodwill</h3>
+      <% for (var i = 0; i < goodwill.length; i++) { %>
+        <p class="text-center"><a href="/donation/<%= goodwill[i]._id%>"><%= goodwill[i].name %></a></p>
+        <p class="text-center"><%= goodwill[i].address.street %><%= goodwill[i].address.city %>, <%= goodwill[i].address.state %><%= goodwill[i].address.zip %></p>
+      <% } %>
     </div>
-    <div class="col-lg-6">
-      <h3 class="text-center"><a href='/donation/clothesandtoys'>Clothes and Toys</a></h3>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center">Goodwill of South Texas</p>
-      <p class="text-center">1561 S. McColl Road Edinburg, Texas 78539</p>
-      <p class="text-center">(866) 222-0555</p>
-      <p class="text-center">Open 24 Hours</p>
-      <form action="http://google.com">
-        <input type="submit" value="Visit Site" class="btn btn-info"/>
-      </form>
+    <div class="col-lg-4">
+      <h3 class="text-center">Bloodbank</h3>
+      <% for (var i = 0; i < bloodbanks.length; i++) { %>
+        <p class="text-center"><a href="/donation/<%= bloodbanks[i]._id%>"><%= bloodbanks[i].name %></a></p>
+        <p class="text-center"><%= bloodbanks[i].address.street %><%= bloodbanks[i].address.city %>, <%= bloodbanks[i].address.state %><%= bloodbanks[i].address.zip %></p>
+      <% } %>
     </div>
-  </div>
-
-
-  <!-- SECOND ROW -->
-  <div class="row">
-    <div class="col-lg-6">
-      <h3 class="text-center"><a href='/donation/blood'>Blood</a></h3>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center">United Blood Services</p>
-      <p class="text-center">1400 S 6th St McAllen, Texas 78501</p>
-      <p class="text-center">(877) 827-4376</p>
-      <p class="text-center">8:00 am - 3:00 pm</p>
-      <button type="button" class="btn btn-info">Visit Site</button>
+    <div class="col-lg-4">
+      <h3 class="text-center">Plasma Centers</h3>
+      <% for (var i = 0; i < plasmacenters.length; i++) { %>
+        <p class="text-center"><a href="/donation/<%= plasmacenters[i]._id%>"><%= plasmacenters[i].name %></a></p>
+        <p class="text-center"><%= plasmacenters[i].address.street %><%= plasmacenters[i].address.city %>, <%= plasmacenters[i].address.state %><%= plasmacenters[i].address.zip %></p>
+      <% } %>
     </div>
-    <div class="col-lg-6">
-      <h3 class="text-center"><a href='/donation/plasma'>Plasma</a></h3>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center">United Blood Services</p>
-      <p class="text-center">1400 S 6th St McAllen, Texas 78501</p>
-      <p class="text-center">(877) 827-4376</p>
-      <p class="text-center">8:00 am - 3:00 pm</p>
-      <button type="button" class="btn btn-info">Visit Site</button>
+    <div class="col-lg-4">
+      <h3 class="text-center">Foodbanks</h3>
+      <% for (var i = 0; i < foodbanks.length; i++) { %>
+        <p class="text-center"><a href="/donation/<%= foodbanks[i]._id%>"><%= foodbanks[i].name %></a></p>
+        <p class="text-center"><%= foodbanks[i].address.street %><%= foodbanks[i].address.city %>, <%= foodbanks[i].address.state %><%= foodbanks[i].address.zip %></p>
+      <% } %>
     </div>
   </div>
 </div>

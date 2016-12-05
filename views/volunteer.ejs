@@ -6,37 +6,25 @@
   <!-- FIRST ROW -->
   <div class="row">
     <div class="col-lg-4">
-      <h3 class="text-center"><a href='/volunteer/hospital'>Hospital</a></h3>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center"> Doctors Hospital At Renaissance</p>
-      <p class="text-center">5501 S. McColl Rd  Edinburg, Texas 78539</p>
-      <p class="text-center">956-362-3203</p>
-      <p class="text-center">Open 24 hours</p>
-      <button type="button" class="btn btn-info">Visit Site</button>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center">South Texas Health System</p>
-      <p class="text-center">1400 W. Trenton Rd. Edinburg, Texas 78539</p>
-      <p class="text-center">956-388-2020</p>
-      <p class="text-center">Open 24 hours
-        <button type="button" class="btn btn-info">Visit Site</button>
+      <h3 class="text-center">FoodBank</h3>
+      <% for (var i = 0; i < foodbanks.length; i++) { %>
+        <p class="text-center"><a href="/volunteer/<%= foodbanks[i]._id%>"><%= foodbanks[i].name %></a></p>
+        <p class="text-center"><%= foodbanks[i].address.street %><%= foodbanks[i].address.city %>, <%= foodbanks[i].address.state %><%= foodbanks[i].address.zip %></p>
+      <% } %>
     </div>
     <div class="col-lg-4">
-      <h3 class="text-center"><a href='/volunteer/food_bank'>FoodBank</a></h3>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center">Food Bank of the RGV</p>
-      <p class="text-center">724 N Cage Blvd Pharr, Texas 78577</p>
-      <p class="text-center">(956) 682-8101</p>
-      <p class="text-center">8:00 am - 5:00 pm</p>
-      <button type="button" class="btn btn-info">Visit Site</button>
+      <h3 class="text-center">Animal Shelter</h3>
+      <% for (var i = 0; i < animalshelters.length; i++) { %>
+        <p class="text-center"><a href="/volunteer/<%= animalshelters[i]._id%>"><%= animalshelters[i].name %></a></p>
+        <p class="text-center"><%= animalshelters[i].address.street %><%= animalshelters[i].address.city %>, <%= animalshelters[i].address.state %><%= animalshelters[i].address.zip %></p>
+      <% } %>
     </div>
     <div class="col-lg-4">
-      <h3 class="text-center"><a href='/volunteer/animal'>Animal Shelter</a></h3>
-      <p class="lead"> IMAGE AND INFO GOES HERE</p>
-      <p class="text-center">Palm Valley Animal Center</p>
-      <p class="text-center">2501 W Trenton Rd Edinburg, Texas 78539</p>
-      <p class="text-center">956-686-1141</p>
-      <p class="text-center">Monday-Saturday 8:00 am - 5:00 pm, Sunday 10 am - 4:00 pm</p>
-      <button type="button" class="btn btn-info">Visit Site</button>
+      <h3 class="text-center">Hospitals</h3>
+      <% for (var i = 0; i < hospitals.length; i++) { %>
+        <p class="text-center"><a href="/volunteer/<%= hospitals[i]._id%>"><%= hospitals[i].name %></a></p>
+        <p class="text-center"><%= hospitals[i].address.street %><%= hospitals[i].address.city %>, <%= hospitals[i].address.state %><%= hospitals[i].address.zip %></p>
+      <% } %>
     </div>
   </div>
 </div>
