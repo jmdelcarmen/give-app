@@ -35,10 +35,16 @@ app.get('/about', index.displayAboutPage);
 // app.post('/api/search/', index.searchResults);
 //Donation//
 app.get('/donation', donation.displayDonationPage);
-app.get('/donation/:category', donation.displayDonationCategory);
+app.get('/donation/foodbank', donation.displayDonationFoodbank);
+app.get('/donation/clothesandtoys', donation.displayDonationClothesAndToys);
+app.get('/donation/blood', donation.displayDonationBlood);
+// app.get('/donation/:category', donation.displayDonationCategory);
 //Volunteer//
 app.get('/volunteer', volunteer.displayVolunteerPage);
-app.get('/volunteer/:category', volunteer.displayVolunteerCategory);
+app.get('/volunteer/hospital', volunteer.displayVolunteerHospital);
+app.get('/volunteer/foodbank', volunteer.displayVolunteerFoodbank);
+app.get('/volunteer/animalshelter', volunteer.displayVolunteerAnimalShelter);
+// app.get('/volunteer/:category', volunteer.displayVolunteerCategory);
 
 
 
