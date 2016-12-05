@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.get('/', index.displayHomePage);
 app.get('/about', index.displayAboutPage);
 //search
-// app.post('/api/search/', index.searchResults);
+app.post('/api/search/', index.searchResults);
 //Donation//
 app.get('/donation', donation.displayDonationPage);
 app.get('/donation/foodbank', donation.displayDonationFoodbank);
@@ -45,8 +45,6 @@ app.get('/volunteer/hospital', volunteer.displayVolunteerHospital);
 app.get('/volunteer/foodbank', volunteer.displayVolunteerFoodbank);
 app.get('/volunteer/animalshelter', volunteer.displayVolunteerAnimalShelter);
 // app.get('/volunteer/:category', volunteer.displayVolunteerCategory);
-
-
 
 app.listen(3000, () => {
   console.log('Construction ongoing on port 3000.');
