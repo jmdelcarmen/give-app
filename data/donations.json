@@ -20,39 +20,87 @@
 },
 
 {
-    "name": "Goodwill of South Texas",
-    "category": "Donation",
-    "location": [
-        {
-            "lat": 26.266834,
-            "lng": -98.1602561
-        },
-        {
-            "lat": 26.2558019,
-            "lng": -98.3175033
-        },
-        {
-            "lat": 26.2409239,
-            "lng": -98.2477064
-        },
-        {
-            "lat": 26.19129,
-            "lng": -98.1298654
-        }
-    ],
-    "website_url": "http://www.goodwillsouthtexas.com",
-    "image": " ",
-    "description": "Your donations to Goodwill will help fund job training programs for people with disabilities or barriers.",
-    "contactUs": "(866) 222-0555",
-    "address": {
-        "street": " ",
-        "city": " ",
-        "state": " ",
-        "zip": 78539
+    "name" : "Goodwill of South Texas, Edinburg",
+    "category" : "Donation",
+    "location" : {
+        "lat" : 26.266834,
+        "lng" : -98.1602561
     },
-    "hours": " ",
-    "open_closed": " "
+    "website_url" : "http://www.goodwillsouthtexas.com",
+    "image" : "https://s20.postimg.org/yv7hc27gt/Goodwill_Edinburg_Winsconsin.jpg",
+    "description" : "Your donations to Goodwill will help fund job training programs for people with disabilities or barriers.",
+    "contactUs" : "(866) 222-0555",
+    "address" : {
+        "street" : "815 E Wisconsin Road",
+        "city" : "Edinburg",
+        "state" : "Texas",
+        "zip" : 78539
+    },
+    "hours" : "Open 24h",
+    "open_closed" : "Open"
+},
 
+{
+    "name" : "Goodwill of South Texas, Palmhurst",
+    "category" : "Donation",
+    "location" : {
+        "lat" : 26.2558019,
+        "lng" : -98.3175033
+    },
+    "website_url" : "http://www.goodwillsouthtexas.com",
+    "image" : "https://s20.postimg.org/pbxsiljyl/Goodwilll_Palmhurst.jpg",
+    "description" : "Your donations to Goodwill will help fund job training programs for people with disabilities or barriers.",
+    "contactUs" : "(866) 222-0555",
+    "address" : {
+        "street" : "120 E Mile 3 Road",
+        "city" : "Palmhurst",
+        "state" : "Texas",
+        "zip" : 78504
+    },
+    "hours" : "Open 24h",
+    "open_closed" : "Open"
+},
+
+{
+    "name" : "Goodwill of South Texas, McAllen",
+    "category" : "Donation",
+    "location" : {
+        "lat" : 26.2409239,
+        "lng" : -98.2477064
+    },
+    "website_url" : "http://www.goodwillsouthtexas.com",
+    "image" : "https://s20.postimg.org/684h2974d/Goodwill_Nolana.jpg",
+    "description" : "Your donations to Goodwill will help fund job training programs for people with disabilities or barriers.",
+    "contactUs" : "(866) 222-0555",
+    "address" : {
+        "street" : "2713 W Nolana Ave",
+        "city" : "Mc Allen",
+        "state" : "Texas",
+        "zip" : 78501
+    },
+    "hours" : "Open 24h",
+    "open_closed" : "Open"
+},
+
+{
+    "name" : "Goodwill of South Texas, Alamo",
+    "category" : "Donation",
+    "location" : {
+        "lat" : 26.19129,
+        "lng" : -98.1298654
+    },
+    "website_url" : "http://www.goodwillsouthtexas.com",
+    "image" : "https://s20.postimg.org/76ku4jkgd/Goodwill_Alamo.jpg",
+    "description" : "Your donations to Goodwill will help fund job training programs for people with disabilities or barriers.",
+    "contactUs" : "(866) 222-0555",
+    "address" : {
+        "street" : "1323 W Frontage Road",
+        "city" : "Alamo",
+        "state" : "Texas",
+        "zip" : 78516
+    },
+    "hours" : "Open 24h",
+    "open_closed" : "Open"
 },
 
 {
@@ -75,4 +123,24 @@
     "hours": "8:00 am - 3:00 pm",
     "open_closed": " "
 
+},
+{
+    "name" : "GRIFOLS Plasma: Biomat USA, INC.",
+    "category" : "Donation",
+    "location" : {
+        "lat" : 26.207325,
+        "lng" : -98.2310227
+    },
+    "website_url" : "https://www.grifolsplasma.com/en/web/plasma/-/bicentennial-mcallen-tx",
+    "image" : " ",
+    "description" : "Grifols is a global healthcare company with more than 13,000 employees in 25 countries working together to improve people's health and well-being. We produce and market life-saving, plasma-derived medicines, diagnostic systems and hospital pharmacy products that are used to treat patients in more than 100 countries worldwide.",
+    "contactUs" : "(956) 686-0042",
+    "address" : {
+        "street" : "400 N 10th Street ",
+        "city" : "McAllen,",
+        "state" : "Texas ",
+        "zip" : 78501
+    },
+    "hours" : " ",
+    "open_closed" : " "
 }]
