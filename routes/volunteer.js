@@ -28,6 +28,6 @@ exports.displayVolunteerPage = (req, res) => {
 
 exports.displayVolunteerItem = (req, res) => {
   Volunteer.findById(req.params.id, (err, volunteer) => {
-    console.log(volunteer);
+    res.render('donation/foodbank', {donation: volunteer, key: process.env.MAP_KEY});
   });
 }

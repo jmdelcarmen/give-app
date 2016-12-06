@@ -1,6 +1,7 @@
 'use strict';
 
 const Donation = require('../models/donation');
+require('dotenv').config();
 
 exports.displayDonationPage = (req, res) => {
   //hospitals
@@ -35,6 +36,6 @@ exports.displayDonationPage = (req, res) => {
 
 exports.displayDonationItem = (req, res) => {
   Donation.findById(req.params.id, (err, donation) => {
-    console.log(donation);
+    res.render('donation/foodbank', {donation: donation, key: process.env.MAP_KEY});
   });
 }
