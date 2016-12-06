@@ -194,10 +194,9 @@ section.footer ul {
 
 .fontbody {
 	font-family: "Times New Roman";
-	color: #E3DFBA;
+	color: #000000;
 	font-size:30px;
   font-weight: bold;
-  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
 }
 
 .fontjob {
