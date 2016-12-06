@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const engine = require('ejs-locals');
 const app = express();
+const port = process.end.PORT || 3000;
 
 //Database Setup
 require('dotenv').config();
@@ -40,6 +41,6 @@ app.get('/donation/:id', donation.displayDonationItem);
 app.get('/volunteer', volunteer.displayVolunteerPage);
 app.get('/volunteer/:id', volunteer.displayVolunteerItem);
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Construction ongoing on port 3000.');
 });
