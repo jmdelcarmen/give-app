@@ -208,7 +208,7 @@ section.footer ul {
 .fontdesc {
 	font-family: "Verdana";
 	color: #000000;
-	font-size:18px;
+	font-size:12px;
 }
 
 .ell{
@@ -239,4 +239,12 @@ section.footer ul {
   text-align: center;
   line-height: 30px;
   padding-left: 10px;
+}
+
+.team-wrapper div.text-center {
+  min-height: 352px;
+}
+
+.team-wrapper div:first-child {
+  min-height: 120px !important;
 }
