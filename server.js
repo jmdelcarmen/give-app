@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const engine = require('ejs-locals');
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Database Setup
 require('dotenv').config();
@@ -35,17 +36,11 @@ app.get('/about', index.displayAboutPage);
 app.post('/api/search/', index.searchResults);
 //Donation//
 app.get('/donation', donation.displayDonationPage);
-app.get('/donation/foodbank', donation.displayDonationFoodbank);
-app.get('/donation/clothesandtoys', donation.displayDonationClothesAndToys);
-app.get('/donation/blood', donation.displayDonationBlood);
-// app.get('/donation/:category', donation.displayDonationCategory);
+app.get('/donation/:id', donation.displayDonationItem);
 //Volunteer//
 app.get('/volunteer', volunteer.displayVolunteerPage);
-app.get('/volunteer/hospital', volunteer.displayVolunteerHospital);
-app.get('/volunteer/foodbank', volunteer.displayVolunteerFoodbank);
-app.get('/volunteer/animalshelter', volunteer.displayVolunteerAnimalShelter);
-// app.get('/volunteer/:category', volunteer.displayVolunteerCategory);
+app.get('/volunteer/:id', volunteer.displayVolunteerItem);
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Construction ongoing on port 3000.');
 });
