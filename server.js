@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const engine = require('ejs-locals');
 const app = express();
-const port = process.end.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 //Database Setup
 require('dotenv').config();
