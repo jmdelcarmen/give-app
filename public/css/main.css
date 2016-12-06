@@ -38,11 +38,11 @@ body {
 /*.donate-photo {
   height:45%;
   width:45%;
-}
+}*/
 
-.volunteer-photo {
-  height:67.7%;
-  width:67.7%;
+/*.volunteer-photo {
+  height:18px;
+  width:18px;
 }*/
 
 .stuck {
@@ -194,38 +194,57 @@ section.footer ul {
 
 .fontbody {
 	font-family: "Times New Roman";
-	color: #E3DFBA;
+	color: #000000;
 	font-size:30px;
   font-weight: bold;
-  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
 }
 
 .fontjob {
 	font-family: "Verdana";
 	color: #FF0000;
-	font-size:18px;
+	font-size:14px;
 }
 
 .fontdesc {
 	font-family: "Verdana";
 	color: #000000;
-	font-size:20px;
+	font-size:12px;
 }
 
 .ell{
   color:white !important;
 }
 
+.relative{
+  position:relative;
+}
+
+.nav-image{
+  display: inline;
+  float: right;
+  background: url("/images/navigation.png") no-repeat;
+  background-size: contain;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+  width: 57px;
+  height: 57px;
+}
+
 #floating-panel {
   position: absolute;
-  top: 10px;
-  left: 25%;
+  right: 25%;
   z-index: 5;
-  background-color: #fff;
   padding: 5px;
-  border: 1px solid #999;
   text-align: center;
-  font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-left: 10px;
+}
+
+.team-wrapper div.text-center {
+  min-height: 352px;
+}
+
+.team-wrapper div:first-child {
+  min-height: 120px !important;
 }
