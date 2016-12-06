@@ -1,48 +1,41 @@
 'use strict';
 
 const Donation = require('../models/donation');
+require('dotenv').config();
 
 exports.displayDonationPage = (req, res) => {
-  Donation.find({}, (err, donations) => {
+  //hospitals
+   Donation.find({name: {$regex: /goodwill/, $options: 'sig'}}, (err, goodwill) => {
     if (err) {
-      res.status(500).send('Failed to load donations.');
+      res.status(500).send('Failed to load volunteers.');
     } else {
-      res.render('donation', {donations: donations});
+      //foodbank
+      Donation.find({name: {$regex: /blood/, $options: 'sig'}}, (err, bloodbanks) => {
+       if (err) {
+         res.status(500).send('Failed to load volunteers.');
+       } else {
+         Donation.find({name: {$regex: /foodbank/, $options: 'sig'}}, (err, foodbanks) => {
+          if (err) {
+            res.status(500).send('Failed to load volunteers.');
+          } else {
+            Donation.find({name: {$regex: /plasma/, $options: 'sig'}}, (err, plasmacenters) => {
+             if (err) {
+               res.status(500).send('Failed to load volunteers.');
+             } else {
+               res.render('donation', {goodwill: goodwill, bloodbanks: bloodbanks, foodbanks: foodbanks, plasmacenters: plasmacenters});
+             }
+           });
+          }
+        });
+       }
+     });
     }
   });
 }
 
-// exports.displayDonationCategory = (req, res) => {
-//   let category = new RegExp(req.params.category.replace('_', ' '));
-//   Donation.find({name: {$regex: category, $options: 'wsig'}}, (err, donations) => {
-exports.displayDonationFoodbank = (req, res) => {
-  // var val = new RegExp('foodbank');
-  Donation.find({name: {$regex: /*val*//foodbank/, $options: 'ig'}}, (err, donations) => {
-    if (err) {
-      res.status(500).send('Failed to load donations.');
-    } else {
-      // res.render('donation/donation-category', {donations: donations, key: process.env.MAP_KEY});
-      res.render('donation/foodbank', {donations: donations, key: process.env.MAP_KEY});
-    }
-  });
-}
 
-exports.displayDonationClothesAndToys = (req, res) => {
-  Donation.find({name: {$regex: /goodwill/, $options: 'ig'}}, (err, donations) => {
-    if (err) {
-      res.status(500).send('Failed to load donations.');
-    } else {
-      res.render('donation/clothesandtoys', {donations: donations});
-    }
-  });
-}
-
-exports.displayDonationBlood = (req, res) => {
-   Donation.find({name: {$regex: /blood/, $options: 'ig'}}, (err, donations) => {
-     if (err) {
-       res.status(500).send('Failed to load donations.');
-     } else {
-       res.render('donation/blood', {donations: donations});
-    }
+exports.displayDonationItem = (req, res) => {
+  Donation.findById(req.params.id, (err, donation) => {
+    res.render('donation/donation-category', {donation: donation, key: process.env.MAP_KEY});
   });
 }
