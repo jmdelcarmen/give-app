@@ -1,144 +1,185 @@
 <% layout('../layout') -%>
 
 
-<br>
-<br>
-<p class="text-center index-display"><a href= <%= volunteer.website_url%> ><img src="<%=volunteer.image%>"/></p></a>
-<p class="text-center fonttitle"><a href= <%= volunteer.website_url%> ><%= volunteer.name%></a></p>
-<p class="text-center"><%= volunteer.description%></p>
-<p class="text-center">
-  <b>Address: </b><%=volunteer.address.street%>
-                  <%=volunteer.address.city%>
-                  <%=volunteer.address.state%>
-                  <%=volunteer.address.zip%>
-</p>
-<p class="text-center">
-  <b>Phone: </b><%=volunteer.contactUs%>
-</p>
-<p class="text-center">
-  <b>Hours: </b><%=volunteer.hours%>
-</p>
+    <br>
+    <br>
+    <p class="text-center index-display"><a href=<%=volunteer.website_url%> ><img src="<%= volunteer.image%>"/></p></a>
+        <p class="text-center fonttitle"><a href=<%=volunteer.website_url%> ><%= volunteer.name%></a></p>
+        <p class="text-center">
+            <%= volunteer.description%>
+        </p>
+        <p class="text-center">
+            <b>Address: </b>
+            <%=volunteer.address.street%>
+                <%=volunteer.address.city%>
+                    <%=volunteer.address.state%>
+                        <%=volunteer.address.zip%>
+        </p>
+        <p class="text-center">
+            <b>Phone: </b>
+            <%=volunteer.contactUs%>
+        </p>
+        <p class="text-center">
+            <b>Hours: </b>
+            <%=volunteer.hours%>
+        </p>
 
-<div id="floating-panel">
-    <!--<b>Navigation: </b>-->
-    <button class="nav-image btn" type="button" id="start">pies</button>
-</div>
+        <div id="floating-panel">
+            <!--<b>Navigation: </b>-->
+            <button class="nav-image btn" type="button" id="start">pies</button>
+        </div>
 
-<div id="map">
+        <div id="map">
 
-  <script>
-    function initMap() {
-      var directionsService = new google.maps.DirectionsService;
-      var directionsDisplay = new google.maps.DirectionsRenderer;
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 11,
-        center: {lat: 26.268383, lng: -98.219369}
-      });
+            <script>
+                function initMap() {
+                    var directionsService = new google.maps.DirectionsService;
+                    var directionsDisplay = new google.maps.DirectionsRenderer;
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 11,
+                        center: {
+                            lat: 26.268383,
+                            lng: -98.219369
+                        }
+                    });
 
-      directionsDisplay.setMap(map);
+                    directionsDisplay.setMap(map);
 
-      var trafficLayer = new google.maps.TrafficLayer();
-        trafficLayer.setMap(map);
+                    var trafficLayer = new google.maps.TrafficLayer();
+                    trafficLayer.setMap(map);
 
-      var infoWindow = new google.maps.InfoWindow({map: map});
+                    var infoWindow = new google.maps.InfoWindow({
+                        map: map
+                    });
 
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            var pos = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
 
-          var lat = String(pos.lat)+' ';
-          var lng = String(pos.lng);
-          var endlat = String(<%=volunteer.location.lat%>)+' ';
-          var endlng = String(<%=volunteer.location.lng%>);
-          //anything that requires longitude and latitude must make changes here
-
-
-          //============================================================
-
-          function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-            directionsService.route({
-              origin: lat+lng,
-              destination: endlat+endlng,
-              travelMode: 'DRIVING'
-            }, function(response, status) {
-              if (status === 'OK') {
-                directionsDisplay.setDirections(response);
-              } else {
-                window.alert('Directions request failed due to ' + status);
-              }
-            });
-          }
-
-          var onChangeHandler = function() {
-            calculateAndDisplayRoute(directionsService, directionsDisplay);
-          };
-          document.getElementById('start').addEventListener('click', onChangeHandler);/*{lat: 41.065669, lng: -89.587285}*/
-
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Vous êtes ici...');
-          map.setCenter(pos);
-        }, function() {
-          handleLocationError(true, infoWindow, map.getCenter());
-        });
-      }
-
-      else {
-        handleLocationError(false, infoWindow, map.getCenter());
-      }
-
-      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-      var markers = locations.map(function(location, i) {
-        return new google.maps.Marker({
-          position: location,
-          label: labels[i % labels.length]
-        });
-      });
-
-      var markerCluster = new MarkerClusterer(map, markers,{
-        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-      });
-
-      // var onChangeHandler = function() {
-      //   calculateAndDisplayRoute(directionsService, directionsDisplay);
-      // };
-      // document.getElementById('start').addEventListener('click', onChangeHandler);/*{lat: 41.065669, lng: -89.587285}*/
-      // console.log(document.getElementById('start').value);
-
-      // document.getElementById('end').addEventListener('change', onChangeHandler);/*{lat: 41.065669, lng: -85.225024}*/
-    }
-
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ?
-                            'Error: The Geolocation service failed.' :
-                            'Error: Your browser doesn\'t support geolocation.');
-    }
-
-    var locations = [<%=volunteer.location%>/*,{lat: 26.268383, lng: -98.219369}*/];
-
-    // function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    //   directionsService.route({
-    //     origin: lat+lng,
-    //     destination: '26.268383 -98.219369',
-    //     travelMode: 'DRIVING'
-    //   }, function(response, status) {
-    //     if (status === 'OK') {
-    //       directionsDisplay.setDirections(response);
-    //     } else {
-    //       window.alert('Directions request failed due to ' + status);
-    //     }
-    //   });
-    // }
-
-  </script>
+                            var lat = String(pos.lat) + ' ';
+                            var lng = String(pos.lng);
+                            var endlat = String(<%=volunteer.location.lat%>) + ' ';
+                            var endlng = String(<%=volunteer.location.lng%>);
+                            //anything that requires longitude and latitude must make changes here
 
 
-  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+                            //============================================================
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= key%>&callback=initMap"></script>
+                            function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+                                directionsService.route({
+                                    origin: lat + lng,
+                                    destination: endlat + endlng,
+                                    travelMode: 'DRIVING'
+                                }, function(response, status) {
+                                    if (status === 'OK') {
+                                        directionsDisplay.setDirections(response);
+                                    } else {
+                                        window.alert('Directions request failed due to ' + status);
+                                    }
+                                });
+                            }
 
-</div>
+                            var onChangeHandler = function() {
+                                calculateAndDisplayRoute(directionsService, directionsDisplay);
+                            };
+                            document.getElementById('start').addEventListener('click', onChangeHandler); /*{lat: 41.065669, lng: -89.587285}*/
+
+                            infoWindow.setPosition(pos);
+                            infoWindow.setContent('Vous êtes ici...');
+                            map.setCenter(pos);
+                        }, function() {
+                            handleLocationError(true, infoWindow, map.getCenter());
+                        });
+                    } else {
+                        handleLocationError(false, infoWindow, map.getCenter());
+                    }
+
+                    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+                    var markers = locations.map(function(location, i) {
+                        return new google.maps.Marker({
+                            position: location,
+                            label: labels[i % labels.length]
+                        });
+                    });
+
+                    var markerCluster = new MarkerClusterer(map, markers, {
+                        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+                    });
+
+                    // var onChangeHandler = function() {
+                    //   calculateAndDisplayRoute(directionsService, directionsDisplay);
+                    // };
+                    // document.getElementById('start').addEventListener('click', onChangeHandler);/*{lat: 41.065669, lng: -89.587285}*/
+                    // console.log(document.getElementById('start').value);
+
+                    // document.getElementById('end').addEventListener('change', onChangeHandler);/*{lat: 41.065669, lng: -85.225024}*/
+                }
+
+                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ?
+                        'Error: The Geolocation service failed.' :
+                        'Error: Your browser doesn\'t support geolocation.');
+                }
+
+                var locations = [<%=volunteer.location%> /*,{lat: 26.268383, lng: -98.219369}*/ ];
+
+                // function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+                //   directionsService.route({
+                //     origin: lat+lng,
+                //     destination: '26.268383 -98.219369',
+                //     travelMode: 'DRIVING'
+                //   }, function(response, status) {
+                //     if (status === 'OK') {
+                //       directionsDisplay.setDirections(response);
+                //     } else {
+                //       window.alert('Directions request failed due to ' + status);
+                //     }
+                //   });
+                // }
+
+                ////////////////////////////////// WEATHER API!///////////////////////////////////
+
+
+
+                $(document).ready(function($) {
+                    $.ajax({
+                        url: "http://api.wunderground.com/api/<%= weather_key%>/geolookup/conditions/q/<%= volunteer.address.state%>/<%= volunteer.address.zip%>.json",
+                        dataType: "jsonp",
+                        success: function(parsed_json) {
+
+                            //set variables for a few of the parsed weather values
+                            var city = parsed_json.location.city;
+                            var state = parsed_json.location.state;
+                            var icon = parsed_json.current_observation.icon_url;
+                            var weather = parsed_json.current_observation.weather;
+                            var temp_f = parsed_json.current_observation.temp_f;
+                            var humidity = parsed_json.current_observation.relative_humidity;
+                            var wind = parsed_json.current_observation.wind_string;
+                            var link = parsed_json.location.wuiurl;
+
+                            //put some context around the weather values that you just parsed out
+                            var weatherIN = "<h4>" + city + ", " + state + "</h4><img src='" + icon + "'><p>" + weather + "</p><p>" + temp_f + "F</p><p>" + humidity + " humidity</p><p>wind: " + wind +
+                                "</p><p>more:<br><br><a href='" + link + "' target='_blank'>" + link + "</a></p>";
+
+                            //put the weatherIN string with context and variables into the results div as html
+                            $(".weatherTarget").html(weatherIN);
+                        }
+                    });
+                });
+            </script>
+
+
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= key%>&callback=initMap"></script>
+
+        </div>
+
+        <div class="weatherTarget">
+
+        </div>
