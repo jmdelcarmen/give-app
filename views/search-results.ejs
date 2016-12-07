@@ -1,6 +1,6 @@
 <% layout('layout') -%>
 
-<div class="container">
+<div class="container search-result">
   <h1 class="text-center">Results: </h1>
   <!-- FIRST ROW -->
   <div class="row">
@@ -11,7 +11,7 @@
         <p class="text-center"><%= data[i].address.street%> <%= data[i].address.city%>, <%= data[i].address.state%> <%= data[i].address.zip%></p>
         <p class="text-center"><%= data[i].contactUs%></p>
         <p class="text-center"><%= data[i].hours%></p>
-        <a href="<%= data[i].website_url%>" class="btn btn-info">Visit Site</a>
+        <a href="<%= data[i].website_url%>" class="btn btn-primary btn-block">Visit Site</a>
       </div>
     <% } %>
   </div>

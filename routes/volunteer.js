@@ -4,7 +4,7 @@ const Volunteer = require('../models/volunteer');
 
 exports.displayVolunteerPage = (req, res) => {
   //hospitals
-   Volunteer.find({name: {$regex: /hospital/, $options: 'sig'}}, (err, hospitals) => {
+   Volunteer.find({name: {$regex: /hospital | medical | regional hospital/, $options: 'sig'}}, (err, hospitals) => {
     if (err) {
       res.status(500).send('Failed to load volunteers.');
     } else {
