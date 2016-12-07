@@ -3,33 +3,41 @@
 <div class="container">
   <h1 class="text-center">Donation</h1>
   <!-- FIRST ROW -->
-  <div class="row">
+  <div class="row flex">
     <div class="col-lg-4">
       <h3 class="text-center">Goodwill</h3>
+      <hr>
       <% for (var i = 0; i < goodwill.length; i++) { %>
-        <p class="text-center"><a href="/donation/<%= goodwill[i]._id%>"><%= goodwill[i].name %></a></p>
-        <p class="text-center"><%= goodwill[i].address.street %><%= goodwill[i].address.city %>, <%= goodwill[i].address.state %><%= goodwill[i].address.zip %></p>
+          <a href="/donation/<%= goodwill[i]._id%>"><%= goodwill[i].name %><i class="fa fa-arrow-left"></i></a>
+          <p class="text-left"><%= goodwill[i].address.street %><%= goodwill[i].address.city %>, <%= goodwill[i].address.state %> <%= goodwill[i].address.zip %></p>
+          <br>
       <% } %>
     </div>
     <div class="col-lg-4">
       <h3 class="text-center">Bloodbank</h3>
+      <hr>
       <% for (var i = 0; i < bloodbanks.length; i++) { %>
-        <p class="text-center"><a href="/donation/<%= bloodbanks[i]._id%>"><%= bloodbanks[i].name %></a></p>
-        <p class="text-center"><%= bloodbanks[i].address.street %><%= bloodbanks[i].address.city %>, <%= bloodbanks[i].address.state %><%= bloodbanks[i].address.zip %></p>
+        <a href="/donation/<%= bloodbanks[i]._id%>"><%= bloodbanks[i].name %><i class="fa fa-arrow-left"></i></a>
+        <p class="text-left"><%= bloodbanks[i].address.street %><%= bloodbanks[i].address.city %>, <%= bloodbanks[i].address.state %> <%= bloodbanks[i].address.zip %></p>
+        <br>
       <% } %>
     </div>
     <div class="col-lg-4">
       <h3 class="text-center">Plasma Centers</h3>
+      <hr>
       <% for (var i = 0; i < plasmacenters.length; i++) { %>
-        <p class="text-center"><a href="/donation/<%= plasmacenters[i]._id%>"><%= plasmacenters[i].name %></a></p>
-        <p class="text-center"><%= plasmacenters[i].address.street %><%= plasmacenters[i].address.city %>, <%= plasmacenters[i].address.state %><%= plasmacenters[i].address.zip %></p>
+        <a href="/donation/<%= plasmacenters[i]._id%>"><%= plasmacenters[i].name %><i class="fa fa-arrow-left"></i></a>
+        <p class="text-left"><%= plasmacenters[i].address.street %><%= plasmacenters[i].address.city %>, <%= plasmacenters[i].address.state %> <%= plasmacenters[i].address.zip %></p>
+        <br>
       <% } %>
     </div>
     <div class="col-lg-4">
       <h3 class="text-center">Foodbanks</h3>
+      <hr>
       <% for (var i = 0; i < foodbanks.length; i++) { %>
-        <p class="text-center"><a href="/donation/<%= foodbanks[i]._id%>"><%= foodbanks[i].name %></a></p>
-        <p class="text-center"><%= foodbanks[i].address.street %><%= foodbanks[i].address.city %>, <%= foodbanks[i].address.state %><%= foodbanks[i].address.zip %></p>
+        <a href="/donation/<%= foodbanks[i]._id%>"><%= foodbanks[i].name %><i class="fa fa-arrow-left"></i></a>
+        <p class="text-left"><%= foodbanks[i].address.street %><%= foodbanks[i].address.city %>, <%= foodbanks[i].address.state %> <%= foodbanks[i].address.zip %></p>
+        <br>
       <% } %>
     </div>
   </div>

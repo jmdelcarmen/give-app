@@ -4,26 +4,32 @@
 <div class="container">
   <h1 class="text-center">Volunteer</h1>
   <!-- FIRST ROW -->
-  <div class="row">
+  <div class="row flex">
     <div class="col-lg-4">
       <h3 class="text-center">FoodBank</h3>
+      <hr>
       <% for (var i = 0; i < foodbanks.length; i++) { %>
-        <p class="text-center"><a href="/volunteer/<%= foodbanks[i]._id%>"><%= foodbanks[i].name %></a></p>
-        <p class="text-center"><%= foodbanks[i].address.street %><%= foodbanks[i].address.city %>, <%= foodbanks[i].address.state %><%= foodbanks[i].address.zip %></p>
+        <a href="/volunteer/<%= foodbanks[i]._id%>"><%= foodbanks[i].name %><i class="fa fa-arrow-left"></i></a>
+        <p class="text-left"><%= foodbanks[i].address.street %><%= foodbanks[i].address.city %>, <%= foodbanks[i].address.state %> <%= foodbanks[i].address.zip %></p>
+        <br>
       <% } %>
     </div>
     <div class="col-lg-4">
       <h3 class="text-center">Animal Shelter</h3>
+      <hr>
       <% for (var i = 0; i < animalshelters.length; i++) { %>
-        <p class="text-center"><a href="/volunteer/<%= animalshelters[i]._id%>"><%= animalshelters[i].name %></a></p>
-        <p class="text-center"><%= animalshelters[i].address.street %><%= animalshelters[i].address.city %>, <%= animalshelters[i].address.state %><%= animalshelters[i].address.zip %></p>
+        <a href="/volunteer/<%= animalshelters[i]._id%>"><%= animalshelters[i].name %><i class="fa fa-arrow-left"></i></a>
+        <p class="text-left"><%= animalshelters[i].address.street %><%= animalshelters[i].address.city %>, <%= animalshelters[i].address.state %> <%= animalshelters[i].address.zip %></p>
+        <br>
       <% } %>
     </div>
     <div class="col-lg-4">
       <h3 class="text-center">Hospitals</h3>
+      <hr>
       <% for (var i = 0; i < hospitals.length; i++) { %>
-        <p class="text-center"><a href="/volunteer/<%= hospitals[i]._id%>"><%= hospitals[i].name %></a></p>
-        <p class="text-center"><%= hospitals[i].address.street %><%= hospitals[i].address.city %>, <%= hospitals[i].address.state %><%= hospitals[i].address.zip %></p>
+        <a href="/volunteer/<%= hospitals[i]._id%>"><%= hospitals[i].name %><i class="fa fa-arrow-left"></i></a>
+        <p class="text-left"><%= hospitals[i].address.street %><%= hospitals[i].address.city %>, <%= hospitals[i].address.state %> <%= hospitals[i].address.zip %></p>
+        <br>
       <% } %>
     </div>
   </div>

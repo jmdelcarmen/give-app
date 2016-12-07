@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
 }
 
 body {
@@ -241,12 +242,53 @@ section.footer ul {
   padding-left: 10px;
 }
 
+.page-header {
+  text-align: center;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 3.8em;
+  color: #f1f1f1;
+  margin-bottom: .5em;
+  padding: .15em 0 .35em;
+  border: none;
+  background: #444;
+  font-weight: 700;
+}
+
+#about h3.about-text {
+  color: #333;
+  background: rgba(255, 255, 255, .75);
+  padding: 3em 2em;
+}
+
+
+
+.team-wrapper .col-lg-4 {
+  background: rgba(255, 255, 255, 0.3);
+  box-sizing: none;
+  border: .01px dotted tomato;
+}
+
 .team-wrapper div.text-center {
-  min-height: 352px;
+  min-height: 400px;
 }
 
 .team-wrapper div:first-child {
   min-height: 120px !important;
+}
+
+.team-wrapper div .fontdesc {
+  font-family: 'Varela Round', sans-serif !important;
+  font-size: 1em;
+}
+
+.team-wrapper div img {
+  margin-top: 2em;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  transition: .35s ease-in-out;
+}
+
+.team-wrapper div img:hover {
+  transform: rotate(-10deg) scale(1.15);
 }
 
 nav {
@@ -267,9 +309,10 @@ nav form {
 input[name="searchq"] {
   min-width: 20%;
   border: none;
-  padding: 5px;
+  padding: 3px 7px;
   flex-grow: 1;
   transition: .4s all;
+  font-size: 1.25em;
 }
 
 input[name="searchq"]:focus {
@@ -299,6 +342,73 @@ input[name="search-submit"]:hover {
 .back {
   min-height: calc(100vh - 295px);
 }
+
+
+.flex .col-lg-4 {
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+}
+
+.flex .col-lg-4 h3 {
+  color: #fefefe;
+  font-family: 'Aref Ruqaa', serif;
+}
+
+.flex .col-lg-4 a {
+  color: #fefefe;
+  display: block;
+  padding-left: 5px;
+  font-size: 1.15em;
+  margin-bottom: .3em;
+}
+
+.flex .col-lg-4 a::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: tomato;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.flex .col-lg-4 p {
+  color: #999;
+  padding-left: 20px;
+}
+
+.flex .col-lg-4 a:hover {
+  color: #ededed;
+}
+
+a:hover > .fa {
+  /*color: red;*/
+  opacity: 1;
+  transform: translateX(7px);
+}
+
+.fa {
+  opacity: 0;
+  transition: .4s all;
+  transform: translateX(15px);
+  color: #fff;
+  font-size: 1.15em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width : 768px) {
   nav form {
