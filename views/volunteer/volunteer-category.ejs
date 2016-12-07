@@ -4,7 +4,11 @@
     <br>
     <br>
     <p class="text-center index-display"><a href=<%=volunteer.website_url%> ><img src="<%= volunteer.image%>"/></p></a>
-        <p class="text-center fonttitle"><a href=<%=volunteer.website_url%> ><%= volunteer.name%></a></p>
+        <p class="text-center fonttitle">
+            <a href=<%=volunteer.website_url%>
+                <%= volunteer.name%>
+            </a>
+        </p>
         <p class="text-center">
             <%= volunteer.description%>
         </p>
@@ -180,6 +184,9 @@
 
         </div>
 
+        <div class="weatherTarget">
+
+        </div>
         <div class="weatherTarget">
 
         </div>
