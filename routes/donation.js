@@ -36,6 +36,6 @@ exports.displayDonationPage = (req, res) => {
 
 exports.displayDonationItem = (req, res) => {
   Donation.findById(req.params.id, (err, donation) => {
-    res.render('donation/donation-category', {donation: donation, key: process.env.MAP_KEY});
+    res.render('donation/donation-category', {donation: donation, key: process.env.MAP_KEY, weather_key: process.env.WEATHER_KEY});
   });
 }
