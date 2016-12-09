@@ -2,6 +2,7 @@
 
 const Volunteer = require('../models/volunteer');
 const Donation = require('../models/donation');
+const q = require('q');
 
 exports.displayHomePage = (req, res) => {
   res.render('index');
@@ -12,14 +13,23 @@ exports.displayAboutPage = (req, res) => {
 }
 
 exports.searchResults = (req, res) => {
-  let q = new RegExp(req.body.searchq);
-  let results = [];
+  const query = new RegExp(req.body.searchq);
+  const results = [];
 
-  Volunteer.find({name: {$regex: q, $options: 'ig'}}, (err, volunteers) => {
-    results.push(...volunteers);
-    Donation.find({name: {$regex: q, $options: 'ig'}}, (err, donations) => {
-      results.push(...donations);
-      res.render('search-results', {data: results, q: new String(q).replace(/\//gi, '')});
+  //queries
+  const volunteersQ = Volunteer.find({name: {$regex: query, $options: 'ig'}}).exec();
+  const donationsQ = Donation.find({name: {$regex: query, $options: 'ig'}}).exec();
+
+  q.all([volunteersQ, donationsQ])
+    .then( data => {
+      results.push(...data[0]);
+      results.push(...data[1]);
+      res.render('search-results', {
+        data: results,
+        q: new String(query).replace(/\//gi, '')
+      });
+    })
+    .catch( err => {
+      res.status(500).send('Something went wrong.');
     });
-  });
-}
+  }

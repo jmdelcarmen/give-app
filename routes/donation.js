@@ -1,41 +1,43 @@
 'use strict';
 
 const Donation = require('../models/donation');
-require('dotenv').config();
+const q = require('q');
 
 exports.displayDonationPage = (req, res) => {
-  //hospitals
-   Donation.find({name: {$regex: /goodwill/, $options: 'sig'}}, (err, goodwill) => {
-    if (err) {
+  //queries
+  const goodwillQ = Donation.find({name: {$regex: /goodwill/, $options: 'sig'}}).exec();
+  const bloodbankQ = Donation.find({name: {$regex: /blood/, $options: 'sig'}}).exec();
+  const foodbankQ = Donation.find({name: {$regex: /food/, $options: 'sig'}}).exec();
+  const plasmacenterQ = Donation.find({name: {$regex: /plasma/, $options: 'sig'}}).exec();
+
+  q.all([goodwillQ, bloodbankQ, foodbankQ, plasmacenterQ])
+    .then( donations => {
+      res.render('donation', {
+        goodwill: donations[0],
+        bloodbanks: donations[1],
+        foodbanks: donations[2],
+        plasmacenters: donations[3]
+      });
+    })
+    .catch( err => {
       res.status(500).send('Failed to load volunteers.');
-    } else {
-      //foodbank
-      Donation.find({name: {$regex: /blood/, $options: 'sig'}}, (err, bloodbanks) => {
-       if (err) {
-         res.status(500).send('Failed to load volunteers.');
-       } else {
-         Donation.find({name: {$regex: /foodbank/, $options: 'sig'}}, (err, foodbanks) => {
-          if (err) {
-            res.status(500).send('Failed to load volunteers.');
-          } else {
-            Donation.find({name: {$regex: /plasma/, $options: 'sig'}}, (err, plasmacenters) => {
-             if (err) {
-               res.status(500).send('Failed to load volunteers.');
-             } else {
-               res.render('donation', {goodwill: goodwill, bloodbanks: bloodbanks, foodbanks: foodbanks, plasmacenters: plasmacenters});
-             }
-           });
-          }
-        });
-       }
-     });
-    }
-  });
-}
+    })
+  }
 
 
 exports.displayDonationItem = (req, res) => {
-  Donation.findById(req.params.id, (err, donation) => {
-    res.render('donation/donation-category', {donation: donation, key: process.env.MAP_KEY, weather_key: process.env.WEATHER_KEY});
-  });
-}
+  //queries
+  const donationQ = Donation.findById(req.params.id).exec();
+
+  q.all([donationQ])
+    .then( donation => {
+      res.render('donation/donation-category', {
+        donation: donation[0],
+        key: process.env.MAP_KEY,
+        weather_key: process.env.WEATHER_KEY
+      });
+    })
+    .catch( err => {
+      res.status(500).send('Failed to load volunteer.');
+    })
+  }
