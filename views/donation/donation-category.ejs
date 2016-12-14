@@ -9,7 +9,7 @@
                 <%= donation.name%>
             </a>
         </p>
-        <p class="text-center">
+        <p class="text-center container">
             <%= donation.description%>
         </p>
         <p class="text-center">
@@ -92,7 +92,7 @@
                             document.getElementById('start').addEventListener('click', onChangeHandler); /*{lat: 41.065669, lng: -89.587285}*/
 
                             infoWindow.setPosition(pos);
-                            infoWindow.setContent('Vous êtes ici...');
+                            infoWindow.setContent('You are here.');
                             map.setCenter(pos);
                         }, function() {
                             handleLocationError(true, infoWindow, map.getCenter());
