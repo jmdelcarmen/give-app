@@ -20,7 +20,7 @@ exports.displayVolunteerPage = (req, res) => {
     .catch( err => {
       res.status(500).send('Failed to load volunteers.');
     });
-  }
+}
 
 
 exports.displayVolunteerItem = (req, res) => {
@@ -38,4 +38,4 @@ exports.displayVolunteerItem = (req, res) => {
     .catch( err => {
       res.status(500).send('Failed to load volunteer.');
     });
-  }
+}

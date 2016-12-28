@@ -22,7 +22,7 @@ exports.displayDonationPage = (req, res) => {
     .catch( err => {
       res.status(500).send('Failed to load volunteers.');
     })
-  }
+}
 
 
 exports.displayDonationItem = (req, res) => {
@@ -40,4 +40,4 @@ exports.displayDonationItem = (req, res) => {
     .catch( err => {
       res.status(500).send('Failed to load volunteer.');
     })
-  }
+}
